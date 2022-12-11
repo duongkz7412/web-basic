@@ -1,0 +1,11 @@
+div{  
+    height: 150px; 
+    width: 400px;
+    
+    background-color: rgb(195, 206, 199)  ;  
+    border: 2px   #999966 solid;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 50px; 
+}
+

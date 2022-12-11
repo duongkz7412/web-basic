@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <style>
+            table{
+                width: 400px;
+                border-spacing: 10px;
+                text-align: left;
+            }
+            .frm{
+				background-color: silver;
+                margin: auto;
+                border: 1px solid cornflowerblue;
+                width: 500px;
+                
+            }
+            .title{
+                background-color: cornflowerblue;
+                text-align: center;
+                color: white;
+            }
+        </style>
+        <script>
+            function frmValidate(){
+                var frm = document.forms['regfr'];
+                var soluong = frm.sl;
+                //số lượng là số dương
+                var t2 = parseInt(soluong.value);
+                if(isNaN(t2) || t2 < 0){
+                    alert("Hãy nhập số lượng là số dương!");
+                    soluong.focus();
+                    return false;
+                }
+        
+
+                alert("Thêm thành công!");
+                return true;
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="frm">
+            <div class="title">Cập nhật Sản Phẩm</div>
+        <form name="regfr" action="reg.php" method="POST" 
+            enctype="multipart/form-data"    
+                onsubmit="return frmValidate()">
+        <table>
+            <tr>
+                <th>Mã Sản phẩm:</th>
+                <td><input value="SP001" required maxlength="5" type="text" name="masp"
+                    placeholder="5 ký tự"></td>
+            </tr>
+            <tr>
+                <th>Tên Sản phẩm:</th>
+                <td><input value="iPhone 12" required type="text" name="tensp"
+                    placeholder="không rỗng"></td>
+            </tr>
+            <tr>
+                <th>Loại Sản phẩm:</th>
+                <td>
+                    <select required>
+                        <option value="">--chọn--</option>
+                        <optgroup label="Apple">
+                            <option value="11">iPhone 11</option>
+                            <option value="11pro">iPhone 11 pro</option>
+                            <option value="11promax">iPhone 11 pro max</option>
+                            <option value="12mini">iPhone 12 mini</option>
+                            <option selected value="12">iPhone 12</option>
+                            <option value="12pro">iPhone 12 pro</option>
+                            <option value="12promax">iPhone 12 pro max</option>
+                        </optgroup>
+                        <optgroup label="Samsung">
+                            <option value="21">S21</option>
+                            <option value="21plus">S21 plus</option>
+                            <option value="21ultra">S21 ultra</option>
+                        </optgroup>
+                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Số lượng:</th>
+                <td><input value="10" required pattern="\d" type="number" name="sl"
+                    placeholder="là số dương"></td>
+            </tr>
+            <tr>
+                <th>Đơn giá:</th>
+                <td><input value="25000000" required pattern="\d" type="number" name="dg"
+                    placeholder="là số, đơn vị VNĐ">VNĐ</td>
+            </tr>
+            <tr>
+                <th>Hình ảnh:</th>
+                <td><input required type="file" name="ha"></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <button type="reset"><img width="30" src="img/delete.png"></button>
+                    <button type="submit"><img width="30" src="img/save.png"></button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+    </body>
+</html>

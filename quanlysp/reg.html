@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <style>
+            table{
+                width: 400px;
+                border-spacing: 10px;
+                text-align: left;
+            }
+            .frm{
+				background-color: silver;
+                margin: auto;
+                border: 1px solid cornflowerblue;
+                width: 500px;
+                
+            }
+            .title{
+                background-color: cornflowerblue;
+                text-align: center;
+                color: white;
+            }
+        </style>
+        <script>
+            function frmValidate(){
+                var frm = document.forms['regfr'];
+                var mahv = frm.mahv;
+                var hoten = frm.hoten;
+                var ns = frm.ns;
+                var khoa = frm.khoa;
+
+                //mail
+                var mail = frm.mail;
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+                //mật khẩu
+                var mk = frm.mk;
+                var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+               //nhập lại mk
+               var pre_mk = frm.pre_mk;
+                
+                //kiểm tra mã học viên
+                //nhập đủ 7 ký tự
+                if(mahv.value.length != 7){
+                    alert("Hãy điền mã học viên đủ 7 ký tự!");
+                    mahv.focus();
+                    return false;
+                }
+                //kt họ tên không rỗng
+                if(hoten.value.length == 0){
+                    alert("Hãy điền họ tên!");
+                    hoten.focus();
+                    return false;
+                }
+                
+                //Ngày sinh: đủ 18 tuổi trở lên
+                var today = new Date();
+                var t1 = new Date(ns.value);
+               
+                var ns1 = today.getFullYear() - t1.getFullYear();
+                //alert(ns1);
+                if(ns1 <= 18 || isNaN(ns1) ){
+                    alert("Ngày sinh không được rỗng và đủ 18 tuổi trở lên!");
+                    ns.focus();
+                    return false;
+                }
+                
+                //Khóa học là số dương
+                var t2 = parseInt(khoa.value);
+                if(isNaN(t2) || t2 < 0){
+                    alert("Hãy nhập khóa học là số dương!");
+                    khoa.focus();
+                    return false;
+                }
+        
+               //mail đúng
+               //Email chỉ chấp nhận
+                /*ký tự HOA
+                ký tự thường
+                chữ số
+                ký tự đặc biệt =_.
+                một ký tự @, theo sau là các ký tự
+                kết thúc bằng dấu . và tối thiểu 2 ký tự, tối đa 4 ký tự
+                */
+               if(!filter.test(mail.value)){
+                    alert("Hãy nhập đúng định dạng Mail!");
+                    mail.focus();
+                    return false;
+                }
+                //kiểm tra mk
+                /*
+                Mật khẩu phải chứa ít nhất
+                1 ký tự HOA
+                1 ký tự thường
+                1 chữ số
+                1 ký tự đặc biệt
+                độ dài tối thiểu 8 ký tự
+                */
+                if(strongRegex.test(mk.value) == false){
+                    alert("Mk có ký tự in HOA, thường, ký tự đặc biệt và số!");
+                    mk.focus();
+                    return false;
+                }
+                //Nhập lại Mật khẩu: 
+                //kiểm tra đúng với trường mật khẩu đã nhập trước đó
+                if(mk.value != pre_mk.value){
+                    alert("Nhập lại mk không trùng khớp");
+                    pre_mk.focus();
+                    return false;
+                }
+                alert("Đăng ký thành công!");
+                return true;
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="frm">
+            <div class="title">ĐĂNG KÝ</div>
+        <form name="regfr" action="reg.php" method="POST" 
+            onsubmit="return frmValidate()">
+        <table>
+            <tr>
+                <th>MSSV:</th>
+                <td><input required pattern=".{7}" type="text" name="mahv"
+                    placeholder="7 ký tự"></td>
+            </tr>
+            <tr>
+                <th>Họ tên:</th>
+                <td><input required type="text" name="hoten"
+                    placeholder="không rỗng"></td>
+            </tr>
+            <tr>
+                <th>Giới tính:</th>
+                <td>
+                    <input required type="radio" name="gt">Nam
+                    <input required type="radio" name="gt">Nữ
+                </td>
+            </tr>
+            <tr>
+                <th>Ngày sinh:</th>
+                <td><input required type="date" name="ns"
+                    placeholder="Từ 18 tuổi"></td>
+            </tr>
+            <tr>
+                <th>Khóa học:</th>
+                <td><input required pattern="\d" type="number" name="khoa"
+                    placeholder="là số dương"></td>
+            </tr>
+            <tr>
+                <th>Số ĐT:</th>
+                <td><input required pattern="\d{10}" type="text" name="dt"
+                    placeholder="nhập 10 số"></td>
+            </tr>
+            <tr>
+                <th>Địa chỉ:</th>
+                <td><input required type="text" name="dc"
+                    placeholder="không rỗng"></td>
+            </tr>
+            <tr>
+                <th>E-mail:</th>
+                <td><input required type="text" name="mail"
+                    placeholder="vidu@gmail.com"></td>
+            </tr>
+            <tr>
+                <th>Mật khẩu:</th>
+                <td><input required type="password" name="mk"
+                    placeholder="Abcd@123 (>= 8 ký tự)"></td>
+            </tr>
+            <tr>
+                <th>Nhập lại MK:</th>
+                <td><input type="password" name="pre_mk"
+                    placeholder="khớp với mk vừa nhập"></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><button type="submit">Đăng Ký</button></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+    </body>
+</html>

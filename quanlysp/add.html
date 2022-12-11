@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <style>
+            #t1{
+                width: 400px;
+                border-spacing: 10px;
+                text-align: left;
+            }
+            .list{
+                background-color: silver;
+                margin: auto;
+                border: 1 solid steelblue;
+                border-collapse: collapse;
+                text-align: left;
+            }
+            .frm{
+				background-color: silver;
+                margin: auto;
+                border: 1px solid cornflowerblue;
+                width: 500px;
+                
+            }
+            .title{
+                background-color: cornflowerblue;
+                text-align: center;
+                color: white;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="frm">
+            <div class="title">Thêm Sản Phẩm</div>
+
+        <table id="t1">
+            <tr>
+                <th>Mã Sản phẩm:</th>
+                <td><input id="masp" required maxlength="5" type="text" name="masp"
+                    placeholder="5 ký tự"></td>
+            </tr>
+            <tr>
+                <th>Tên Sản phẩm:</th>
+                <td><input id="tensp" required type="text" name="tensp"
+                    placeholder="không rỗng"></td>
+            </tr>
+            <tr>
+                <th>Loại Sản phẩm:</th>
+                <td>
+                    <select id="loaisp" required>
+                        <option value="">--chọn--</option>
+                        <option value="apple">Apple</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Xiaomi">Xiaomi</option>
+                        <option value="Oppo">Oppo</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Số lượng:</th>
+                <td><input id="sl" required pattern="\d" type="number" name="sl"
+                    placeholder="là số dương"></td>
+            </tr>
+            <tr>
+                <th>Đơn giá:</th>
+                <td><input id="dg" required pattern="\d" type="number" name="dg"
+                    placeholder="là số, đơn vị VNĐ"></td>
+            </tr>
+            <tr>
+                <th>Hình ảnh:</th>
+                <td><input id="ha" required type="file" name="ha"></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <button type="reset"><img width="30" src="img/delete.png"></button>
+                    <button id="btn" type="submit"><img width="30" src="img/save.png"></button>
+                </td>
+            </tr>
+
+        </table>
+</div>
+<br>
+<hr>
+<table class="list" border="1" id="list">
+	<tr style="background-color: steelblue; color: white;">
+        <th>Mã SP</th>
+        <th>Tên SP</th>
+        <th>Loại SP</th>
+        <th>Số lượng</th>
+        <th>Đơn giá</th>
+        <th>Hình ảnh</th>
+    </tr>
+
+</table>
+
+<script>
+    var btn = document.getElementById('btn');
+    var masp = document.getElementById('masp');
+    var tensp = document.getElementById('tensp');
+    var loaisp = document.getElementById('loaisp');
+    var sl = document.getElementById('sl');
+    var dg = document.getElementById('dg');
+    var ha = document.getElementById('ha');
+    //lấy tên file: Sử dụng lastIndexOf để lấy \ Cuối cùng làm chỉ mục 
+    function getFile(filePath) {
+        
+        /*Chỉ lấy tên
+        return filePath.substr(filePath.lastIndexOf('\\') + 1).split('.')[0];
+        */
+        //lấy tên và phần mở rộng
+        return filePath.substr(filePath.lastIndexOf('\\') + 1);
+    }
+    
+    var list = document.getElementById('list');
+    
+    btn.onclick = function () {
+        var tr = document.createElement('tr');
+        var id = document.createAttribute("id");
+        id.value = masp.value;
+        tr.setAttributeNode(id)
+        list.appendChild(tr);
+        var tr1 = document.getElementById(id.value);
+        alert(getFile(ha.value));
+        function add(sp, tr){
+            var td = document.createElement('td');
+            td.textContent = sp.value;
+            tr.appendChild(td);
+            sp.value = null;
+        }
+
+        //thêm hình ảnh
+        function addimg(sp, tr){
+            var src = getFile(sp.value)
+            var td = document.createElement('td');
+            //td.innerHTML = "<img width='50' src = '"+ src +"' >";
+            td.innerHTML = "<img width='50' src = 'img/"+ src +"' >";
+            tr.appendChild(td);
+            sp.value = null;
+        }
+
+        add(masp, tr1);
+        add(tensp, tr1);
+        add(loaisp, tr1);
+        add(sl, tr1);
+        add(dg, tr1);
+        addimg(ha, tr1);
+    
+    
+    }
+    </script>
+    </body>
+</html>
