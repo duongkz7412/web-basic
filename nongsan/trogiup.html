@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="anh/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/9ac8be3ee8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Trợ Giúp</title>
+</head>
+
+<body>
+
+<header class="p-3 bg-light text-success">
+    <div class="container">
+        <div class="d-flex">
+
+            <ul class="nav me-lg-auto mb-2 mb-md-0">
+                <li><a href="trangchu.html" class="nav-link px-2 text-success">Trang Chủ</a></li>
+                <li><a href="sanpham.html" class="nav-link px-2 text-success">Sản Phẩm</a></li>
+                <li><a href="tintuc.html" class="nav-link px-2 text-success">Tin Tức</a></li>
+                <li><a href="lienhe.html" class="nav-link px-2 text-success">Liên Hệ</a></li>
+            </ul>
+
+            <form name="form-search" action="timkiem.html" class="col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <input id="search_text" name="words" type="text" class="form-control"
+                       placeholder="Tìm kiếm..." onkeypress="checkKey(event)" aria-label="Search">
+                <i onclick="checkFormSearch()"></i>
+            </form>
+
+            <div class="text-end">
+                <ul class="nav">
+                    <li><img src="./anh/header/icon-user.png" class="nav-link px-2"></li>
+                    <li><a href="dangnhap.html" class="nav-link px-2 text-success">Đăng Nhập</a></li>
+                    <li class="nav-link px-2 text-success">/</li>
+                    <li><a href="dangky.html" class="nav-link px-2 text-success">Đăng Ký</a></li>
+                    <li><a href="donhang.html" class="nav-link px-xl-2"> <img
+                            src="./anh/header/icon-cart.png"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="banner-slide d-md-block d-sm-none d-none banner-list">
+        <div class="main-nav d-flex flex-column flex_center">
+            <h1 class="d-flex">Hướng Dẫn Mua Hàng</h1>
+        </div>
+    </section>
+    <div class="row main-lst">
+        <div class="col-md-3">
+            <div class="box-left row">
+                <div class="flex-column">
+                    <img src="./anh/trogiup/310569657_1263205967574894_5952158074901882601_n.png" width="400px">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 right-user">
+            <div class="tab-content">
+                <div class="w-100">
+                    <h4 class="border-bottom mt-4">Hướng Dẫn Mua Hàng</h4>
+                    <p class="mt-4">Khách hàng của Nông Sản Cho Nhà Vườn mua hàng có thể mua hàng theo 3 phương
+                        thức:
+                    <ul>
+                        <li> Mua hàng trực tiếp trên website của Nông Sản Cho Nhà Vườn.</li>
+                        <li>Liên hệ hotline: 023456788.</li>
+                        <li> Mua tại đại lý chính thức của Nông Sản Cho Nhà Vườn.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<footer class="text-center text-lg-start bg-white text-muted">
+    <div class="container text-center text-md-start mt-5">
+        <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    <img src="./anh/icon.png" width="30px">
+                    Nông Sản Cho Nhà Vườn
+                </h6>
+                <p>
+                    <img src="./anh/footer/icon-location.png">
+                    Ninh Kiều, TP.Cần Thơ, Việt Nam
+                </p>
+                <p>
+                    <img src="./anh/footer/icon-email.png">
+                    nongsanchonhavuon@gmai.com
+                </p>
+                <p>
+                    <img src="./anh/footer/icon-telephone.png">
+                    + 84 234 567 88
+                </p>
+            </div>
+
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Liên Kết</h6>
+                <p>
+                    <a href="dangnhap.html" class="text-reset">Đăng Nhập</a>
+                </p>
+                <p>
+                    <a href="dangky.html" class="text-reset">Đăng Ký</a>
+                </p>
+                <p>
+                    <a href="donhang.html" class="text-reset">Đơn Hàng</a>
+                </p>
+            </div>
+
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Trợ Giúp</h6>
+                <p>
+                    <a href="trogiup.html" class="text-reset">Hướng Dẫn Mua Hàng</a>
+                </p>
+                <p>
+                    <a href="lienhe.html" class="text-reset">Liên Hệ</a>
+                </p>
+                <a href="#top" class='goto'><img src="./anh/bttop.png"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./js/js.js"></script>
+</body>
+
+</html>

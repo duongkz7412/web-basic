@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="anh/icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/9ac8be3ee8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tin Tức</title>
+</head>
+
+<body>
+
+<header class="p-3 bg-light text-success">
+    <div class="container">
+        <div class="d-flex">
+            <ul class="nav me-lg-auto mb-2 mb-md-0">
+                <li><a href="trangchu.html" class="nav-link px-2 text-success">Trang Chủ</a></li>
+                <li><a href="sanpham.html" class="nav-link px-2 text-success">Sản Phẩm</a></li>
+                <li><a href="tintuc.html" class="nav-link px-2 text-success">Tin Tức</a></li>
+                <li><a href="lienhe.html" class="nav-link px-2 text-success">Liên Hệ</a></li>
+            </ul>
+
+            <form name="form-search" action="timkiem.html" class="col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <input id="search_text" name="words" type="text" class="form-control"
+                       placeholder="Tìm kiếm..." onkeypress="checkKey(event)" aria-label="Search">
+                <i onclick="checkFormSearch()"></i>
+            </form>
+
+            <div class="text-end">
+                <ul class="nav">
+                    <li><img src="./anh/header/icon-user.png" class="nav-link px-2"></li>
+                    <li><a href="dangnhap.html" class="nav-link px-2 text-success">Đăng Nhập</a></li>
+                    <li class="nav-link px-2 text-success">/</li>
+                    <li><a href="dangky.html" class="nav-link px-2 text-success">Đăng Ký</a></li>
+                    <li><a href="donhang.html" class="nav-link px-xl-2"> <img
+                            src="./anh/header/icon-cart.png"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<main class="news">
+    <section class="banner-slide d-md-block d-sm-none d-none banner-list">
+        <div class="main-nav d-flex flex-column flex_center">
+            <h1>TIN TỨC</h1>
+        </div>
+    </section>
+    <div class="two-column-right">
+        <article>
+            <h2>ENZYME LÀ GÌ? Enzyme ảnh hưởng tới cơ thể của chúng ta ra sao</h2>
+            <div class="two-column-left">
+                <img src="./anh/tintuc/enzyme-la-gi-enzyme-anh-huong-toi-co-the-cua-chung-ta-ra-sao-1586519880.jpg"
+                     class="img-thumbnail">
+                <p>Enzym hay enzim (tiếng Anh: enzyme) hay còn gọi là men là chất xúc tác sinh học có thành phần cơ
+                    bản là protein.
+                    Enzyme là một phần rất quan trọng đối với mỗi chúng ta, lưu ý...
+                    <a
+                            href="https://www.vinmec.com/vi/tieu-hoa-gan-mat/thong-tin-suc-khoe/enzyme-la-gi-va-cach-chung-hoat-dong/">Xem
+                        chi tiết</a>
+                </p>
+            </div>
+            <h2>Đường phèn nâu, một loại "vàng" trong đông y </h2>
+            <div class="two-column-left">
+                <img src="./anh/tintuc/duong-phen-1586530791.jpg" class="img-thumbnail">
+                <p>Các loại sữa hạt càng ngày trở nên quen thuộc với mọi người, bởi hàm lượng dinh dưỡng cao, và
+                    lành tính. Với thị trường sữa hạt đa dạng phong phú, hôm nay chúng ta cùng điểm qua xem có các
+                    loại sữa hạt nào, và loại nào là bổ dưỡng nhất cho sức khỏe?.
+                    <a href="https://suckhoedoisong.vn/duong-phen-tot-cho-ty-va-phe-16917012.htm#:~:text=Theo%20%C4%90%C3%B4ng%20y%2C%20%C4%91%C6%B0%E1%BB%9Dng%20ph%C3%A8n,%2C%20ch%C3%B3ng%20m%E1%BA%B7t%2C%20%C4%91au%20%C4%91%E1%BA%A7u.">Xem
+                        chi tiết</a>
+                </p>
+            </div>
+            <h2>Top 9 các loại hạt nên ăn hằng ngày để sống khỏe</h2>
+            <div class="two-column-left">
+                <img src="./anh/tintuc/top-5-cac-loai-hat-nen-an-hang-ngay-de-song-khoe-1579664895.png"
+                     class="img-thumbnail">
+                <p>Hạt dẻ cười chúng rất quen thuộc trong những ngày lễ Tết của người Việt Nam. Chúng chứa khá nhiều
+                    protein và các chất dinh dưỡng quan trọng khác. Chúng cũng là một...
+                    <a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/dinh-duong/9-loai-hat-tot-nhat-cho-suc-khoe/">Xem
+                        chi tiết</a>
+                </p>
+            </div>
+            <h2>ĐĂNG KÍ THÀNH VIÊN - NHẬN NGAY ƯU ĐÃI</h2>
+            <div class="two-column-left">
+                <img src="./anh/tintuc/login-bg1_0.jpg" class="img-thumbnail">
+                <p>Nông Sản Cho Nhà Vườn hân hạnh mang đến chương trình "Đăng Kí Thành Viên" với nhiều ưu đãi độc
+                    đáo.
+                    Member Card - thẻ thành viên dành cho tất cả khách hàng đăng kí tài khoản
+                    và phát sinh đơn hàng.
+                    <a href="dangky.html">Xem chi tiết</a>
+                </p>
+            </div>
+        </article>
+        <aside>
+            <div class="title-big">
+                <h1 class='title'>ĐƯỢC QUAN TÂM</h1>
+            </div>
+            <div>
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 2</div>
+                        <img src="./anh/tintuc/hotnews.jpg" style="width:100%">
+                        <div class="text">Khai trương hân hoan - ưu đãi ngập tràn
+                            <a href="#">Xem chi tiết</a>
+                        </div>
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 2</div>
+                        <img src="./anh/tintuc/asian-mother-daughter-are-helping-together-collect-fresh-hydroponic-vegetable-farm-concept-gardening-kid-education-household-agricultural-family-life-style.jpg"
+                             style="width:100%">
+                        <div class="text">Giáo dục trẻ em bằng xây dựng khu vườn theo ý tưởng
+                            <a href="#">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="text-center text-lg-start bg-white text-muted">
+    <div class="container text-center text-md-start mt-5">
+        <div class="row">
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    <img src="./anh/icon.png" width="30px">
+                    Nông Sản Cho Nhà Vườn
+                </h6>
+                <p>
+                    <img src="./anh/footer/icon-location.png">
+                    Ninh Kiều, TP.Cần Thơ, Việt Nam
+                </p>
+                <p>
+                    <img src="./anh/footer/icon-email.png">
+                    nongsanchonhavuon@gmai.com
+                </p>
+                <p>
+                    <img src="./anh/footer/icon-telephone.png">
+                    + 84 234 567 88
+                </p>
+            </div>
+
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Liên Kết</h6>
+                <p>
+                    <a href="dangnhap.html" class="text-reset">Đăng Nhập</a>
+                </p>
+                <p>
+                    <a href="dangky.html" class="text-reset">Đăng Ký</a>
+                </p>
+                <p>
+                    <a href="donhang.html" class="text-reset">Đơn Hàng</a>
+                </p>
+            </div>
+
+            <div class="col-md-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Trợ Giúp</h6>
+                <p>
+                    <a href="trogiup.html" class="text-reset">Hướng Dẫn Mua Hàng</a>
+                </p>
+                <p>
+                    <a href="lienhe.html" class="text-reset">Liên Hệ</a>
+                </p>
+                <a href="#top" class='goto'><img src="./anh/bttop.png"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./js/js.js"></script>
+
+</body>
+
+</html>

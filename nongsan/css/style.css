@@ -1,0 +1,329 @@
+main {
+    grid-area: main-cell;
+    display: grid;
+    grid-template-areas:
+        'left-cell'
+        'artical-cell'
+        'right-cell';u
+    border: 1px solid #ccc7c8;
+    ;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.goto{
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+}
+.goto img{
+    padding:10px;
+    width: 80px;
+    height:80px;
+    z-index: 100;
+}
+
+
+.text {
+    color: #51ad23;
+}
+
+
+main h3 {
+    line-height: 24px;
+    font-size: 20px;
+}
+
+main .two-column-right {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 'left-cell article-cell';
+}
+
+main .two-column-left {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 'article-cell right-cell';
+}
+
+
+main .two-column-left img {
+    grid-area: right-cell;
+}
+
+main .two-column-left p {
+    grid-area: article-cell;
+}
+
+main .two-column-right p {
+    grid-area: article-cell;
+}
+
+main .title-big {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* transform: rotateX(-12deg); */
+
+}
+
+/* tro giup*/
+.banner-list {
+    background: url(../anh/banner-list.jpg) 50% 0 no-repeat;
+    height: 122px
+}
+
+.banner-slide {
+    position: relative
+}
+
+.banner-slide .main-nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff
+}
+
+.banner-slide .main-nav h4 {
+    font-size: 24px;
+    font-weight: 700
+}
+
+.banner-slide .main-nav a {
+    color: #fff;
+    margin: 0 10px
+}
+
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* tin tuc*/
+.news .two-column-right article {
+    grid-area: article-cell;
+}
+
+.news .two-column-right aside {
+    grid-area: left-cell;
+    margin: 0 10px;
+}
+
+.news img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.news article div p {
+    grid-area: article-cell;
+}
+
+.news article div img {
+    grid-area: right-cell;
+}
+
+.news h2 {
+    font-size: 23px;
+}
+
+/* lien he */
+.center{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* dang nhap dang ky */
+#on{
+
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 16px;
+}
+#wrapper{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form-login{
+    max-width: 400px;
+    background: rgba(234, 233, 233, 0.8);
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    box-shadow: 0 0 17px 2px rgba(30, 29, 29, 0.8);
+}
+.form-heading{
+    font-size: 25px;
+    color: #47971e;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-group{
+    border-bottom: 1px solid #47971e;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.form-group i{
+    color: #47971e;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #47971e;
+    flex-grow: 1;
+}
+.form-input::placeholder{
+    color: #47971e;
+}
+
+.form-submit{
+    background: transparent;
+    border: 1px solid #47971e;
+    color: #47971e;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+}
+.form-submit:hover{
+    border: 1px solid #54a0ff;
+}
+.form-checkbox{
+    color: #47971e;
+}
+
+/*trang chu*/
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.box_about {
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-bottom: 45px;
+    margin-left: 5px;
+}
+
+.box-about .item-about strong {
+    color: #51ad23;
+    font-size: 18px
+}
+
+.box-about .item-about p {
+    color: #6c6c6c
+}
+
+.c_line {
+    background: url(../anh/trangchu/icon-tick.png) top 15px left 100px no-repeat;
+    padding-left: 150px;
+}
+
+.r_line {
+    background: url(../anh/trangchu/icon-tick.png) top 15px right 100px no-repeat;
+    padding-right: 150px;
+}
+
+/* Sản phẩm */
+.boxx .hov:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    border: 3px solid #47971e;
+    background: #fff;
+}
+
+.boxx .hov {
+    background: linear-gradient(180deg, #829460 10%,#D3E4CD,white);
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
