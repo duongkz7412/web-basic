@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script async src="./JavaScript.js"></script>
+    <title>Freeeze Yogurt</title>
+</head>
+
+<body>
+    <header id="top">
+        <div class='logo'>
+            <a href="trangchu.html">
+                <img class='logo' src="./images/logo.png"></a>
+        </div>
+        <div class="nav">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="gioithieu.html">Giới Thiệu</a>
+            <a href="sanpham.html">Sản Phẩm</a>
+            <a href="tintuc.html">Tin Tức</a>
+            <a href="dangnhap.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+            <a href="lienhe.html">Liên Hệ</a>
+
+        </div>
+        <div class="search-cart">
+            <form name="form_search" action="timkiem.html">
+                <input id="search_text" name="words" type="text" placeholder="Nhập nội dung cần tìm..."
+                    onkeypress="checkKey(event)">
+                <i class="fas fa-search" onclick="checkFormSearch()"></i>
+                <i onclick="gotoCart()" class="fas fa-shopping-cart"></i>
+            </form>
+        </div>
+        <div class="header-img">
+            <img src="./images/header-img1.png" class='header-img1'>
+            <img src="./images/header-img2.png" class='header-img2'>
+            <img src="./images/header-img3.png" class='header-img3'>
+        </div>
+    </header>
+    <main class="news">
+        <div class="two-column-right">
+            <article>
+                <div class="title-big">
+                    <h1 class='title'>TIN TỨC</h1>
+                </div>
+                <h2>LỘ DIỆN SIÊU NĂNG LỰC TỪ TRÁI XOÀI!</h2>
+                <div class="two-column-left">
+                    <img src="./images/tintuc/news1.jpg" alt="">
+                    <p>Xoài là một trong những cây ăn trái chủ lực của đồng bằng sông Cửu Long (ĐBSCL), chiếm khoảng 48%
+                        tổng diện tích xoài cả nước. Trong đó, tỉnh Đồng Tháp hiện có diện tích trồng xoài khoảng
+                        12.171ha - lớn nhất vùng ĐBSCL với sản lượng hàng năm gần 124 ngàn tấn.
+                        <a href="https://hongngochospital.vn/loi-ich-cua-xoai-doi-voi-suc-khoe/">Xem chi tiết</a>
+                    </p>
+                </div>
+                <h2>SỮA CHUA LOẠI HẠT - MÓN NGON CHO HỆ MIỄN DỊCH SỨA KHỎE</h2>
+                <div class="two-column-left">
+                    <img src="./images/tintuc/news2.jpg" alt="">
+                    <p>Các loại sữa hạt càng ngày trở nên quen thuộc với mọi người, bởi hàm lượng dinh dưỡng cao, và
+                        lành tính. Với thị trường sữa hạt đa dạng phong phú, hôm nay chúng ta cùng điểm qua xem có các
+                        loại sữa hạt nào, và loại nào là bổ dưỡng nhất cho sức khỏe?.
+                        <a
+                            href="https://vnexpress.net/an-sua-chua-va-cac-loai-hat-la-cach-tot-nhat-de-giam-can-2276474.html">Xem
+                            chi tiết</a>
+                    </p>
+                </div>
+                <h2>SỮA CHUA KIWI - MÓN QUÀ TỐT CHO SỨC KHỎE</h2>
+                <div class="two-column-left">
+                    <img src="./images/tintuc/news3.jpg" alt="">
+                    <p>Kiwi thành phần dinh dưỡng rất cao so với các loại hoa quả khác. Hàm lượng vitamin C cao cho hệ
+                        miễn dịch khỏe mạnh cùng nguồn chất xơ hỗ trợ hệ tiêu hóa. Siêu quả Kiwi cho cả nhà siêu khỏe,
+                        100% Vitamin C cần thiết mỗi ngày.
+                        <a href="https://www.zespri.com/vi-VN/blog">Xem chi tiết</a>
+                    </p>
+                </div>
+                <h2>RA MẮT APP SỮA CHUA Freeeze TRÊN TẢNG IOS</h2>
+                <div class="two-column-left">
+                    <img src="./images/tintuc/news4.jpg" alt="">
+                    <p>Nhằm mang đến cho tất cả khách hàng những trải nghiệm thú vị nhất Công ty Sữa Chua Freeeze giới
+                        thiệu app đặt hàng độc đáo, giúp khách hàng mua sắm được mọi lúc mọi nơi với nhiều tiện ích.
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                </div>
+                <h2>ĐĂNG KÍ THÀNH VIÊN - NHẬN NGAY ƯU ĐÃI</h2>
+                <div class="two-column-left">
+                    <img src="./images/tintuc/news5.jpg" alt="">
+                    <p>Công ty sữa chua hân hạnh mang đến chương trình "Đăng Kí Thành Viên" với nhiều ưu đãi độc đáo.
+                        Member Card - thẻ thành viên nhà Sữa Chua Freeeze dành cho tất cả khách hàng đăng kí tài khoản
+                        và phát sinh đơn hàng.
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                </div>
+                <h2>TUYỂN GIÁM SÁT CHUỖI CỬA HÀNG</h2>
+                <div class="two-column-left">
+                    <img src="./images/tintuc/news6.jpg" alt="">
+                    <p>Tuyển Giám Sát chuỗi cửa hàng : - Tại khu vực TP Hải Phòng & các tỉnh lân cận - Số lượng: 01 MÔ
+                        TẢ: Giám sát hoạt động kinh doanh các cửa hàng : Kiểm tra lịch làm việc của các cửa hàng.
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                </div>
+            </article>
+            <aside>
+                <div class="title-big">
+                    <h1 class='title'>ĐƯỢC QUAN TÂM</h1>
+                </div>
+                <div>
+                    <img src="./images/tintuc/hotnews.jpg" alt="">
+                    </p>
+                    <h2>KHAI TRƯƠNG HÂN HOAN - ƯU ĐÃI NGẬP TRÀN</h2>
+                    <p>Khai trương hân hoan - ưu đãi ngập tràn 🌈🥰 Thêm 1 ngôi nhà mới của Sữa chua Freeeze được khai
+                        trương.
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>&copy <b> 2021 Bản quyền thuộc về Freeeze. </b>
+            <a href="#"><i class="icon fab fa-facebook-f"></i></a>
+            <a href="#"><i class="icon fab fa-twitter"></i></a>
+            <a href="#"><i class="icon fab fa-pinterest"></i></a>
+            <a href="#top" class='goto'><img src="./images/top.png"></a>
+        </p>
+    </footer>
+</body>
+
+</html>

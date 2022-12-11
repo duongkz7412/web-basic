@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script async src="./JavaScript.js"></script>
+    <title>Freeze Yogurt</title>
+</head>
+
+<body>
+    <header id="top">
+        <div class='logo'>
+            <a href="trangchu.html">
+                <img class='logo' src="./images/logo.png"></a>
+        </div>
+        <div class="nav">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="gioithieu.html">Giới Thiệu</a>
+            <a href="sanpham.html">Sản Phẩm</a>
+            <a href="tintuc.html">Tin Tức</a>
+            <a href="dangnhap.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+            <a href="lienhe.html">Liên Hệ</a>
+
+        </div>
+        <div class="search-cart">
+            <form name="form_search" action="timkiem.html">
+                <input id="search_text" name="words" type="text" placeholder="Nhập nội dung cần tìm..."
+                    onkeypress="checkKey(event)">
+                <i class="fas fa-search" onclick="checkFormSearch()"></i>
+                <i onclick="gotoCart()" class="fas fa-shopping-cart"></i>
+            </form>
+        </div>
+        <div class="header-img">
+            <img src="./images/header-img1.png" class='header-img1'>
+            <img src="./images/header-img2.png" class='header-img2'>
+            <img src="./images/header-img3.png" class='header-img3'>
+        </div>
+    </header>
+    <main>
+        <article class='product'>
+            <div class="title-big">
+                <h1 class='title'>SẢN PHẨM TRUYỀN THỐNG</h1>
+            </div>
+            <section class='items'>
+                <div>
+                    <img src="./images/sanpham/kiwi.jpg" alt="">
+                    <h2>Sữa Chua Vị Kiwi</h2>
+                    <p>Hương vị thơm ngon của trái Kiwi xanh, nổi tiếng của đất nước New Zealand có trong Sữa chua vị
+                        Kiwi xanh đem đến một món ăn nhẹ Siêu ngon và tốt cho hệ tiêu hóa. <a href="#">Xem chi tiết</a>
+                    </p>
+                    <span>Số lượng: <input id="sp001" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp001')">Đặt hàng</button>
+                    </span>
+                </div>s
+                <div>
+                    <img src="./images/sanpham/mango.jpg" alt="">
+                    <h2>Sữa Chua Vị Xoài</h2>
+                    <p>Sữa chua xoài thích hợp cho mọi lứa tuổi, vì vậy hãy để cả gia đình quây quần bên nhau cùng
+                        thưởng thức món ăn thơm ngon, bổ dưỡng này. <a href="#">Xem chi tiết</a></p>
+                    <span>Số lượng: <input id="sp002" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp002')">Đặt hàng</button>
+                    </span>
+                </div>
+                <div>
+                    <img src="./images/sanpham/cantaloupe.jpg" alt="">
+                    <h2>Sữa Chua Vị Dưa Lưới</h2>
+                    <p>Trong dưa lưới chứa rất nhiều vitamin C có tác dụng làm đẹp da hiệu quả. Phụ nữ ăn sinh tố dưa
+                        lưới thường xuyên sẽ có làn da mịn màng.<a href="#">Xem chi tiết</a></p>
+                    <span>Số lượng: <input id="sp003" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp003')">Đặt hàng</button>
+                    </span>
+                </div>
+            </section>
+            <div class="title-big">
+                <h1 class='title'>SẢN PHẨM MỚI</h1>
+            </div>
+            <section class='items'>
+                <div>
+                    <img src="./images/sanpham/blackberry.jpg" alt="">
+                    <h2>Sữa Chua Vị Mâm Xôi</h2>
+                    <p>Quả mâm xôi là loại quả ăn họ hoa hồng, có nguồn gốc từ châu Âu, Bắc Á và được trồng ở các vùng
+                        ôn đới trên toàn thế giới. Có nhiều loại, bao gồm đen, tím và vàng <a href="#">Xem chi tiết</a>
+                    </p>
+                    <span>Số lượng: <input id="sp004" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp004')">Đặt hàng</button>
+                    </span>
+                </div>
+                <div>
+                    <img src="./images/sanpham/strawberry.jpg" alt="">
+                    <h2>Sữa Chua Vị Dâu Tây</h2>
+                    <p>Dâu tây là một loài cây thân thảo có thân ngắn và các chiếc lá mọc gần với nhau. Lá có nhiều gai,
+                        bề mặt lá có nhiều lông tơ và kích thước lá có thể khác nhau ở từng giống. <a href="#">Xem chi
+                            tiết</a></p>
+                    <span>Số lượng: <input id="sp005" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp005')">Đặt hàng</button>
+                    </span>
+                </div>
+                <div>
+                    <img src="./images/sanpham/blueberry.jpg" alt="">
+                    <h2>Sữa Chua Vị Việt Quốc</h2>
+                    <p>Quả việt quất chứa các dưỡng chất tốt cho sức khỏe như chất xơ, kali, folate, vitamin C và
+                        vitamin B6 (những chất hỗ trợ rất tốt cho sức khỏe của tim).
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                    <span>Số lượng: <input id="sp006" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp006')">Đặt hàng</button>
+                    </span>
+                </div>
+            </section>
+            <div class="title-big">
+                <h1 class='title'>SẢN PHẨM TRÁI CÂY MIỀN NHIỆT ĐỚI</h1>
+            </div>
+            <section class='items'>
+                <div>
+                    <img src="./images/sanpham/grapes.jpg" alt="">
+                    <h2>Sữa Chua Vị Bưởi</h2>
+                    <p>Bưởi là một loại quả thuộc chi Cam chanh có nguồn gốc từ Đông Nam Á. Bưởi tiếng Anh gọi là
+                        Pomelo, tuy nhiên nhiều từ điển ở Việt Nam lại dịch thành grapefruit.
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                    <span>Số lượng: <input id="sp007" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp007')">Đặt hàng</button>
+                    </span>
+                </div>
+                <div>
+                    <img src="./images/sanpham/green-apple.jpg" alt="">
+                    <h2>Sữa Chua Vị Táo Xanh</h2>
+                    <p>Táo xanh có hàm lượng chất xơ cao giúp tăng cường quá trình trao đổi chất của cơ thể. Bên cạnh
+                        đó, chất xơ còn giúp quá trình giải độc gan và hệ tiêu hóa.
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                    <span>Số lượng: <input id="sp008" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp008')">Đặt hàng</button>
+                    </span>
+                </div>
+                <div>
+                    <img src="./images/sanpham/pineapple.jpg" alt="">
+                    <h2>Sữa Chua Vị Dứa</h2>
+                    <p>Dứa có các tên gọi khác như là khóm, thơm, khớm, gai hoặc huyền nương. Đây là một loại quả nhiệt
+                        đới. Dứa là cây bản địa của các nước Nam Mỹ.
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                    <span>Số lượng: <input id="sp009" type="number" min="0" max="100" size="3" value="0">
+                        <button onclick="addCart('sp009')">Đặt hàng</button>
+                    </span>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>&copy <b> 2021 Bản quyền thuộc về Freeeze. </b>
+            <a href="#"><i class="icon fab fa-facebook-f"></i></a>
+            <a href="#"><i class="icon fab fa-twitter"></i></a>
+            <a href="#"><i class="icon fab fa-pinterest"></i></a>
+            <a href="#top" class='goto'><img src="./images/top.png"></a>
+        </p>
+    </footer>
+</body>
+
+</html>

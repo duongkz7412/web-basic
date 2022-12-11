@@ -1,0 +1,362 @@
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 5px;
+    border: 1px;
+    font: 1.2em Helvetica, arial, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header-cell"
+    "nav-cell"
+    "main-cell"
+    "footer-cell";
+}
+main, header, footer{
+    border: 1px solid #ccc7c8;;
+    background-color: #fff;
+    border-radius: 5px;
+    padding:0 5px;
+}
+a{
+    text-decoration: none;
+}
+/*==========================================*/
+        /* Header */
+header{
+    margin-bottom: 2px;
+    grid-area: header-cell;
+    background-image: url(./images/header.png);
+    height: 100px;
+}
+header .nav{
+    margin-top: 20px;
+    display: inline-block;
+    /* float: left; */
+}
+header .nav a{
+    margin: 3px;
+    padding: 2px 4px;
+    border: 1px solid #fff;
+    font-size: 17px;
+    color: #ed4190;
+    background-color: #ffffff80;
+    height: 20px;
+    box-shadow: 0 0 3px 0 #00000066;
+    box-shadow: 0 0 2px 0 #0000004d;
+    border-radius: 5px;
+}
+header .nav a:hover{
+    color:#fff;
+    background-color: #ed4190;
+}
+header .search-cart{
+    float: right;
+    padding-top: 18px;
+}
+.search-cart i{
+    cursor: pointer;
+    max-width: 30px;
+    color: #fff;
+    background-color: #cddc39;
+    padding: 4px;
+    font-size: 17px;
+}
+.search-cart .fa-shopping-cart{
+    color:#ed4190;
+}
+header .header-img1{
+    height: 100px;
+    position: absolute;
+    top:-30px;
+    left: 30%;
+    animation: img1 3s ;
+}
+@keyframes img1{
+    from{left: 80%;}
+    to{left:30%;}
+}
+header .header-img2{
+    height: 70px;
+    position: absolute;
+    top:-5px;
+    left: 45%;
+    animation: img2 3s ;
+}
+@keyframes img2{
+    from{left: 80%;}
+    to{left:45%;}
+}
+header .header-img3{
+    height: 80px;
+    position: absolute;
+    top:0;
+    left: 60%;
+    animation: img3 3s ;
+}
+@keyframes img3{
+    from{left: 80%;}
+    to{left:60%;}
+}
+    /*End header  */
+/*==========================================*/
+    /*Main*/
+main{
+    grid-area: main-cell; 
+    display: grid;
+    grid-template-areas: 
+    'left-cell'
+    'artical-cell'
+    'right-cell';
+}
+main img, video{
+    max-width: 100%;
+    border-radius: 7px;
+}
+p{
+    margin: 3px 5px;
+    text-align: justify;
+}
+h1, h2, h3{
+    color: #f90b6d;
+
+}
+h1{
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 300;
+    font-size:27px;
+    line-height: 34px;
+    margin: 12px 0 16px;
+    text-align: center;
+}
+h2{
+    font-weight: 70;
+    font-size: 25px;
+    margin: 10px 0;
+    text-align: justify;
+}
+h3{
+    font-weight: 70;
+}
+
+main .title-big{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* transform: rotateX(-12deg); */
+
+}
+main .title-big::after{
+    content: '';
+    margin: 12px 0 16px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    transform: translateX(-50%);
+    height: 3px;
+    background: radial-gradient(#cddc39,#fff);
+    
+}
+main h3{
+    line-height: 24px;
+    font-size: 20px;
+}
+main .two-column-right{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 'left-cell article-cell';
+}
+main .two-column-left{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 'article-cell right-cell';
+}
+main .three-column{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 'left-cell article-cell right-cell';
+}
+main .two-column-left img{
+    grid-area: right-cell;
+}
+main .two-column-left p{
+    grid-area: article-cell;
+}
+
+main .two-column-right p{
+    grid-area: article-cell;
+}
+main .two-column-right video{
+    grid-area: right-cell;
+}
+article .slide-left-right{
+    display: block;
+    height: 300px;
+    column-count: 2;
+}
+article .slide-left-right h3{
+    break-before: column;
+
+}
+main .order{
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+    justify-content: center;
+}
+main .order-item{
+    max-width: 24%;
+    padding-top: 5px;
+    border: 1px solid #ed4190;
+    border-radius: 5px;
+    text-align: center;
+}
+main .order-item img{
+    width: 50%;
+}
+main .order-item p{
+    text-align: center;
+}
+/************************************/
+    /*Trang giới thiệu*/
+.intro article img{
+    width:100%;
+    border-radius: 5px;
+}
+.intro aside{
+    grid-area: right-cell;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    
+}
+.intro aside h1{
+    text-align:center;
+    word-break: break-word;
+
+}
+.intro article{
+    text-align: justify;
+    grid-area: article-cell;
+}
+    /*Hết trang giới thiệu*/
+/************************************/
+    /*Trang sản phẩm*/
+main section{
+    display: flex;
+}
+.product h1{
+    text-align: center;
+}
+.items div{
+    justify-content: space-between;
+    color: #333;
+    flex-grow:1;
+    flex-wrap: wrap;
+    margin:3px;
+    border: 1px solid #dbd7d9;
+    border-radius: 4px;
+    text-align: center;
+    background-image: linear-gradient(to top, #cddc39 0%, white 10%);
+}
+section div h2{
+    text-align: center;
+}
+section div p{
+    text-align: justify;
+}
+section div span{
+    display: block;
+    margin: 4px;
+    padding: 3px;
+    max-width: 100%;
+}
+    /*Hết trang sản phẩm*/
+/************************************/
+    /*Bắt đầu trang tin tức*/
+.news .two-column-right article{
+    grid-area: article-cell;
+}
+.news .two-column-right aside{
+    grid-area: left-cell;
+    margin: 0 10px;
+}
+.news article div img{
+    vertical-align: top;
+}
+.news img{
+    width:100%;
+    border-radius: 5px;
+}
+.news article div p{
+    grid-area: article-cell;
+}
+.news article div img{
+    grid-area: right-cell;
+}
+.news h2{
+    font-size: 23px;
+}
+    /*Hết trang tin tức*/
+/************************************/
+    /*Trang đăng nhập*/
+form{
+    grid-area: article-cell;
+}
+.fas{
+    background-color: #cddc39;
+    width: 18px;
+    padding: 6px 12px;
+    color: white;
+    margin: 1px;
+    border-radius: 3px;
+}
+    /*Hết trang đăng nhập*/
+/************************************/
+    /*Trang đăng kí*/
+.login, .register, .hotline{
+    margin: 10px;
+}
+.login input, .register input, .hotline input{
+    padding:2.5px 0;
+}
+    /*Hết trang đăng kí*/
+/************************************/
+    /*Trang liên hệ*/
+.hotline{
+    grid-area: articel-cell;
+}
+.fa-map-marker-alt{
+    color:#f90b6d;
+}
+.hotline .content{
+    margin-left:48px;
+}
+    /*Hết trang liên hệ*/
+/************************************/
+   
+
+    /* End main*/
+/*==========================================*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    grid-area: footer-cell;
+    padding: 15px;
+}
+footer a{
+    color: #ed4190;
+}
+.goto{
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+}
+.goto img{
+    padding:10px;
+    width: 50px;
+    height:50px;
+    z-index: 100;
+}

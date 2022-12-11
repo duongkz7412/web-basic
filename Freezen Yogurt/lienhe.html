@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script async src="./JavaScript.js"></script>
+    <title>Freeze Yogurt</title>
+</head>
+
+<body>
+    <header id="top">
+        <div class='logo'>
+            <a href="trangchu.html">
+                <img class='logo' src="./images/logo.png"></a>
+        </div>
+        <div class="nav">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="gioithieu.html">Giới Thiệu</a>
+            <a href="sanpham.html">Sản Phẩm</a>
+            <a href="tintuc.html">Tin Tức</a>
+            <a href="dangnhap.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+            <a href="lienhe.html">Liên Hệ</a>
+
+        </div>
+        <div class="search-cart">
+            <form name="form_search" action="timkiem.html">
+                <input id="search_text" name="words" type="text" placeholder="Nhập nội dung cần tìm..."
+                    onkeypress="checkKey(event)">
+                <i class="fas fa-search" onclick="checkFormSearch()"></i>
+                <i onclick="gotoCart()" class="fas fa-shopping-cart"></i>
+            </form>
+        </div>
+        <div class="header-img">
+            <img src="./images/header-img1.png" class='header-img1'>
+            <img src="./images/header-img2.png" class='header-img2'>
+            <img src="./images/header-img3.png" class='header-img3'>
+        </div>
+    </header>
+    <main>
+        <div class="title-big">
+            <h1 class='title'>Liên hệ</h1>
+        </div>
+        <aside>
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                <b>Địa chỉ: 0123, Tòa Nhà ABC, TP.Cần Thơ</b>
+                Nếu bạn có góp ý, vui lòng liên hệ bằng thư điện tử hoặc sử dụng biểu mẫu bên dưới.
+                Xin cảm ơn.
+            </p>
+        </aside>
+        <div class="title-big">
+            <h1 class='title'>Góp Ý</h1>
+        </div>
+        <article class="three-column">
+            <form action="#" onsubmit="return checkFormHotline(this)" method="POST"
+                enctype="application/x-www-form-urlencoded">
+                <div class="hotline">
+                    <div class="name">
+                        <i class="fas fa-user"></i>
+                        <input name="name" type="text" placeholder="Vui lòng nhập họ tên của bạn">
+                    </div>
+                    <div class="email">
+                        <i class="fas fa-envelope"></i>
+                        <input name="email" type="text" placeholder="Vui lòng nhập địa chỉ Email">
+                    </div>
+                    <div class="selection">
+                        <i class="fas fa-bars"></i>
+                        <select name="" id="topic" size="1">
+                            <option value="">Về Sản Phẩm/Dịch Vụ</option>
+                            <option value="">VềƯu đãi thành viên</option>
+                            <option value="">VềTin Tuyển Dụng</option>
+                        </select>
+                    </div>
+                    <div class="content">
+                        <textarea name="massage" cols="50" rows="7" placeholder="Nội dung cần liên hệ"></textarea>
+                    </div>
+                    <div class="submit">
+                        <i class="fas fa-sticky-note"></i>
+                        <input type="submit">
+                    </div>
+                </div>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p>&copy <b> 2021 Bản quyền thuộc về Freeeze. </b>
+            <a href="#"><i class="icon fab fa-facebook-f"></i></a>
+            <a href="#"><i class="icon fab fa-twitter"></i></a>
+            <a href="#"><i class="icon fab fa-pinterest"></i></a>
+            <a href="#top" class='goto'><img src="./images/top.png"></a>
+        </p>
+    </footer>
+</body>
+
+</html>

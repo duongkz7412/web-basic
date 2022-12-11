@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script async src="./JavaScript.js"></script>
+    <title>Freeeze Yogurt</title>
+</head>
+
+<body>
+    <header id="top">
+        <div class='logo'>
+            <a href="trangchu.html">
+                <img class='logo' src="./images/logo.png"></a>
+        </div>
+        <div class="nav">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="gioithieu.html">Giới Thiệu</a>
+            <a href="sanpham.html">Sản Phẩm</a>
+            <a href="tintuc.html">Tin Tức</a>
+            <a href="dangnhap.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
+            <a href="lienhe.html">Liên Hệ</a>
+
+        </div>
+        <div class="search-cart">
+            <form name="form_search" action="timkiem.html">
+                <input id="search_text" name="words" type="text" placeholder="Nhập nội dung cần tìm..."
+                    onkeypress="checkKey(event)">
+                <i class="fas fa-search" onclick="checkFormSearch()"></i>
+                <i onclick="gotoCart()" class="fas fa-shopping-cart"></i>
+            </form>
+        </div>
+        <div class="header-img">
+            <img src="./images/header-img1.png" class='header-img1'>
+            <img src="./images/header-img2.png" class='header-img2'>
+            <img src="./images/header-img3.png" class='header-img3'>
+        </div>
+    </header>
+    <main>
+        <div class="sildes"><img src="./images/trangchu/bg-home.jpg" alt=""></div>
+        <article>
+            <div class="title-big">
+                <h1 class='title'>SẢN PHẨM MỚI</h1>
+            </div>
+            <h2>Sữa chua tốt cho sức khỏe</h2>
+            <section class="content two-column-right">
+
+                <img src="./images/trangchu/yogurt.jpg" alt="">
+                <p>Sữa chua là một loại thực phẩm được tạo ra từ quá trình lên men sữa của các vi khuẩn. Hầu hết các
+                    loại sữa đều có thể dùng làm sữa chua, tuy nhiên sữa bò là được dùng nhiều hơn hết. Sữa chua hay
+                    được gọi là yaourt (là da-ua). Chúng được lên men từ sữa động vật nhờ vi khuẩn lactic, đã được khử
+                    chất béo và thanh trùng ở nhiệt độ 80 - 90 độ C.Sữa chua có 2 loại cơ bản là sữa chua có đường và
+                    sữa chua không đường. Bên cạnh đó còn có loại sữa chua uống, sữa chua men sống. Váng sữa thường được
+                    chia làm 3 loại dựa vào hàm lượng chất béo có trong sản phẩm: váng sữa có hàm lượng chất béo cao
+                    nhất (35-50% chất béo), váng sữa thông thường (10-30% chất béo), váng sữa nguyên kem (6-15% chất
+                    béo).</p>
+            </section>
+            <div class="title-big">
+                <h1 class='title'>GỐC THÀNH VIÊN</h1>
+            </div>
+            <h2>Sữa chua nhà làm</h2>
+            <section class="content two-column-left">
+
+                <video controls>
+                    <source type="video/mp4" src="./images/trangchu/yogurt.mp4">
+                </video>
+                <p>Học làm sữa chua tại gia cùng chuyên gia.Trong thực đơn dinh dưỡng
+                    của các bà mẹ cho con trẻ và các thành viên trong gia đình đều không thể thiếu món sữa chua thơm
+                    ngon, hấp dẫn và cực kì tốt cho sức khỏe này. Tuy nhiên, đa phần đều chọn mua sữa chua công nghiệp
+                    đã được đóng hộp bán sẵn tại các siêu thị và cửa hàng hơn là sữa chua tự làm tại nhà. Như vậy, liệu
+                    sữa chua nhà làm và sữa chua công nghiệp thì loại nào tốt sức khỏe của chúng ta hơn? Nếu là một
+                    người yêu thích nấu ăn bạn sẽ chọn sữa nhà làm hay mua sữa chua công nghiệp bên ngoài. Sữa chua nhà
+                    làm đảm bảo về độ an toàn, chất lượng cũng như giá thành rẻ.
+                    <a href="https://www.cooky.vn/blog/nen-chon-sua-chua-nha-lam-hay-sua-chua-cong-nghiep-4297">Xem chi
+                        tiết</a>
+                </p>
+            </section>
+            <h2>Hướng Dẫn Làm Sữa Chua Không Đường</h2>
+            <section class="content slide-left-right">
+                <h3>Nguyên liệu làm sữa chua không đường</h3>
+                <ul>
+                    <li>1 lít sứa tươi không đường</li>
+                    <li>1 hộp sữa chua lên men không đường( bạn có thể mua sữa chua đống hợp không đường như Vinamilk,
+                        TH True Milk,....</li>
+                    <li>Dụng cụ nấu và ủ sữa chua</li>
+                </ul>
+                <h3>Các bước thực hiện</h3>
+                <ol>
+                    <li>Cho sữa chua không đường vào nồi, đun nóng lên và khuấy đều, theo một chiều. Tới khi sữa đạt
+                        khoảng 40 độ C thì tắt bếp. Bạn có thể dùng tay để kiểm tra, thấy sữa ấm vừa phải là được.</li>
+                    <li>Đổ hộp sữa chua làm men cái vào và khuấy đều, múc vào hủ và đem đi ủ 6-8 tiếng.</li>
+                    <li>Sau khi ủ xong, bạn có thể dùng một hủ sữa chua vừa ủ để ăn thử, nếu thấy đạt vị sữa chua rồi
+                        thì có thể bảo quản mát tủ lạnh và thưởng thức dần nhé.</li>
+                </ol>
+            </section>
+            <h2>Đặt hàng ngay</h2>
+            <section class="content order">
+                <div class='order-item'>
+                    <img src="./images/trangchu/order_1.png">
+                    <p>Gọi điện</p>
+                </div>
+                <div class='order-item'>
+                    <img src="./images/trangchu/order_2.png">
+                    <p>Đặt hàng</p>
+                </div>
+                <div class='order-item'>
+                    <img src="./images/trangchu/order_3.png">
+                    <p>Nhận hàng</p>
+                </div>
+                <div class='order-item'>
+                    <img src="./images/trangchu/order_4.png">
+                    <p>Thanh toán</p>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <p>&copy <b> 2021 Bản quyền thuộc về Freeeze. </b>
+            <a href="#"><i class="icon fab fa-facebook-f"></i></a>
+            <a href="#"><i class="icon fab fa-twitter"></i></a>
+            <a href="#"><i class="icon fab fa-pinterest"></i></a>
+            <a href="#top" class='goto'><img src="./images/top.png"></a>
+        </p>
+    </footer>
+</body>
+
+</html>
